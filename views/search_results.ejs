@@ -1,38 +1,42 @@
 <!DOCTYPE HTML>
-<html>
-<head>
-  <title>Eureka</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-<body>
-  <div id="search-form">
-  <%- include('search-form.ejs') %>
-</div>
+  <html>
+    <head>
+      <title>Eureka</title>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+      <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet">
+    </head>
+    <body>
 
-<div id="user-search">
-  <p>Your search: <%= query %></p>
-</div>
-
-<% data.forEach(function (array) { %>
-  <% array.forEach (function(result){ %>
-
-    <div class="result">
-      <div id="title">
-        <a href="<%= result.weburl %>"><%= result.title %> ...</a>
+      <div id="search-form">
+        <div id="title-results"> EUREKA </div>
+        <div id=search-results><%- include('search-form.ejs') %></div>
       </div>
-      <div id="description">
-        <%= result.description %>
-      </div>
-      <div id="keywords">
-        <%= result.keywords %>
-      </div>
-      <div id="weburl">
-        <%= result.weburl %>
-      </div>
-      <% }) %>
-      <% }) %>
 
-    </div>
+      <div id = "all-results">
+        <p>Your search: <%= query %></p>
 
-  </body>
+        <% data.forEach(function (array) { %>
+          <% array.forEach (function(result){ %>
+
+            <div class="result">
+              <div id="link">
+                <a href="<%= result.weburl %>"><%= result.title %> ...</a>
+              </div>
+              <div id="description">
+                <%= result.description %>
+              </div>
+              <div id="keywords">
+                <%= result.keywords %>
+              </div>
+              <div id="weburl">
+                <%= result.weburl %>
+              </div>
+            </div>
+
+          <% }) %>
+        <% }) %>
+
+      </div>
+
+    </body>
   </html>

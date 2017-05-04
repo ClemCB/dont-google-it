@@ -1,25 +1,60 @@
 body {
-  margin: 50px;
-  background-color: white;
+  background-color: #fff;
   font-family: arial,sans-serif;
+  margin: 50px 200px 0px 200px;
+}
+
+#title {
+  /*border: solid black 1px;*/
+  font-family: 'Bungee Hairline', cursive;
+  width: 100%;
+  text-align: center;
+  margin-top: 250px;
+  font-size: 80px;
+}
+
+#title-results {
+  position: relative;
+  top: 40px;
+  font-family: 'Bungee Hairline', cursive;
+  width: 180px;
+  font-size: 2.75em;
+  font-weight: bold;
+}
+
+#search-results {
+  float: right;
+}
+
+#search-form {
+  width: 700px;
+  height: 150px;
+  margin: 0 auto;
 }
 
 form {
-  width:100%;
-  text-align: center;
-  margin: 70px auto;
-  margin-left: 100px;
+  width: 500px;
+  height: 45px;
+  margin: 0 auto;
 }
 
 #search {
-  margin: auto;
-  width: 50%;
+  width: 100%;
   padding: 10px;
 }
 
-#field {
-  display: inline;
-	float: left;
+#all-results {
+  margin: 50px 0px 150px 0px;
+}
+
+#form-wrapper {
+  margin: 0 auto;
+  height: 40px;
+  width: 485px;
+}
+
+#search-bar {
+  float: left;
 	width:380px;
 	height:27px;
 	line-height:27px;
@@ -29,39 +64,23 @@ form {
 	background: #fff;
 	border:solid 1px #d9d9d9;
 	border-top:solid 1px #c0c0c0;
-	border-right:none;
+	border-right:solid 1px #c0c0c0;
 }
 
 #submit {
-  display:inline;
-  float: left;
+  border: solid darkgray 1px;
+  float: right;
 	cursor: pointer;
 	width:90px;
 	height: 29px;
 	font-size: 12px;
-  text-align: center;
   font-weight: bold;
-  border: none;
   background-color: #FFA500;
-  color: white;
-  margin-top: -18px;
-  margin-left: 8px;
+  margin-top: -17px;
 }
 
 #submit:hover {
   background-color: #ffb646;
-}
-
-#search-form {
-  margin: auto;
-  margin-bottom: 5%;
-  width: 50%;
-}
-
-#fish_div {
-  width: 165px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .result {
@@ -84,4 +103,15 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+#quote-div {
+  position: relative;
+  /*border: solid green 1px;*/
+  color: lightgray;
+  text-align: center;
+  /*margin: 0 auto;*/
+  width: 100%;
+  bottom:10px;
+  height:60px;   /* Height of the footer */
 }
