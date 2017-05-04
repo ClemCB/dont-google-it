@@ -1,25 +1,62 @@
 body {
-  margin: 50px;
+  /*margin: 50px;*/
   background-color: white;
   font-family: arial,sans-serif;
 }
 
+#title {
+  font-family: 'Bungee Hairline', cursive;
+  /*border: solid black 1px;*/
+  width: 100%;
+  text-align: center;
+  margin-top: 200px;
+  font-size: 80px;
+}
+
+#title-results {
+  position: fixed;
+  font-family: 'Bungee Hairline', cursive;
+  /*border: solid black 1px;*/
+  width: 125px;
+  font-size: 2.75em;
+  top: 100px;
+}
+
+#search-form {
+  position: relative;
+  /*border: solid blue 1px;*/
+  width: 700px;
+  height: 100px;
+  padding-top: 100px;
+  margin: 0 auto;
+}
+
 form {
+  /*border: solid red 1px;*/
   width:100%;
   text-align: center;
-  margin: 70px auto;
+  margin: 0 auto;
   margin-left: 100px;
 }
 
 #search {
+  /*border: solid green 1px;*/
   margin: auto;
-  width: 50%;
+  width: 100%;
   padding: 10px;
 }
 
-#field {
+#form-wrapper {
+  /*border: solid pink 1px;*/
+  margin: 0 auto;
+  /*height: 15px;*/
+  width: 600px;
+  padding-right: 300px;
+
+}
+
+#search-bar {
   display: inline;
-	float: left;
 	width:380px;
 	height:27px;
 	line-height:27px;
@@ -29,39 +66,28 @@ form {
 	background: #fff;
 	border:solid 1px #d9d9d9;
 	border-top:solid 1px #c0c0c0;
-	border-right:none;
+	border-right:solid 1px #c0c0c0;
 }
 
 #submit {
+  position: relative;
   display:inline;
-  float: left;
+  float: right;
 	cursor: pointer;
-	width:90px;
+	width: 90px;
 	height: 29px;
 	font-size: 12px;
-  text-align: center;
+  /*text-align: center;*/
   font-weight: bold;
   border: none;
   background-color: #FFA500;
   color: white;
-  margin-top: -18px;
+  margin-top: -30px;
   margin-left: 8px;
 }
 
 #submit:hover {
   background-color: #ffb646;
-}
-
-#search-form {
-  margin: auto;
-  margin-bottom: 5%;
-  width: 50%;
-}
-
-#fish_div {
-  width: 165px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .result {
@@ -77,11 +103,11 @@ form {
   font-size: 14px;
 }
 
-a {
+#result-title {
   text-decoration: none;
   font-size: 20px;
 }
 
-a:hover {
+#result-title:hover {
   text-decoration: underline;
 }

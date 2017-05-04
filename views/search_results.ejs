@@ -1,11 +1,18 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
   <title>Eureka</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet">
 </head>
 <body>
-  <div id="search-form">
+
+<div id="search-form">
+  <a href=<%- "'/'" %>><div id="title-results"> EUREKA </div></a>
   <%- include('search-form.ejs') %>
 </div>
 
@@ -17,8 +24,8 @@
   <% array.forEach (function(result){ %>
 
     <div class="result">
-      <div id="title">
-        <a href="<%= result.weburl %>"><%= result.title %> ...</a>
+      <div id="link">
+        <a id="result-title" href="<%= result.weburl %>"><%= result.title %> ...</a>
       </div>
       <div id="description">
         <%= result.description %>
