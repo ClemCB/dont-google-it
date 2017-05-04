@@ -1,6 +1,6 @@
 var nonSearchWords = ['a', 'an', 'the', 'is', 'and', 'or', 'www.', 'he', 'she', 'it', 'they', 'i'];
 
-function prepareQueryString(query) {
+function removeNonAlphaNumericCharacters(query) {
   var query = query.replace(/[^\w\s]/gi, '');
   return splitQueryString(query);
 }
@@ -22,10 +22,19 @@ function appendPercentageCharacter(query_array) {
   return query_array;
 }
 
-function difference (query_array, wordsToRemove) {
+function difference(query_array, wordsToRemove) {
   return query_array.filter(function(word) {
     return wordsToRemove.indexOf(word) < 0;
   });
 }
 
-module.exports = prepareQueryString;
+// The way we were exporting before was overwriting module.exports. We now need to export
+// in this way (below) and call prepareQueryString.removeNonAlphaNumericCharacters(search);
+// Next step is to encapsulte some of these methods more, maybe removeNonSearchWords belongs
+// elsewhere?
+// Then tests!
+
+module.exports = {
+  removeNonAlphaNumericCharacters,
+  splitQueryString
+};

@@ -3,7 +3,7 @@ var pgp = require('pg-promise')({noLocking:true});
 var prepareQueryString = require('./prepareQueryString');
 
 function searchDatabase(search) {
-  search = prepareQueryString(search);
+  search = prepareQueryString.removeNonAlphaNumericCharacters(search);
 
   var database_search = [];
 
